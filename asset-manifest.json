@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Forest-Fire-Smoke-Detection-and-Classification/static/css/main.9b2b8361.css",
+    "main.js": "/Forest-Fire-Smoke-Detection-and-Classification/static/js/main.52f8952d.js",
+    "static/js/453.c8553857.chunk.js": "/Forest-Fire-Smoke-Detection-and-Classification/static/js/453.c8553857.chunk.js",
+    "index.html": "/Forest-Fire-Smoke-Detection-and-Classification/index.html",
+    "main.9b2b8361.css.map": "/Forest-Fire-Smoke-Detection-and-Classification/static/css/main.9b2b8361.css.map",
+    "main.52f8952d.js.map": "/Forest-Fire-Smoke-Detection-and-Classification/static/js/main.52f8952d.js.map",
+    "453.c8553857.chunk.js.map": "/Forest-Fire-Smoke-Detection-and-Classification/static/js/453.c8553857.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9b2b8361.css",
+    "static/js/main.52f8952d.js"
+  ]
+}
