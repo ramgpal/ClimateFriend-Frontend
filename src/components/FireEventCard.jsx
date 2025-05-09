@@ -1,4 +1,3 @@
-// components/FireEventCard.js
 import { motion } from 'framer-motion';
 
 const FireEventCard = ({ title, description, image, align, onLearnMore }) => {
@@ -11,7 +10,6 @@ const FireEventCard = ({ title, description, image, align, onLearnMore }) => {
         className="w-full md:w-1/2 relative overflow-hidden rounded-xl shadow-lg"
         whileHover={{ scale: 1.02 }}
       >
-        {/* Background blur for low-res images */}
         <div 
           className="absolute inset-0 bg-gray-200 blur-md scale-110 z-0"
           style={{
@@ -21,8 +19,7 @@ const FireEventCard = ({ title, description, image, align, onLearnMore }) => {
             opacity: 0.7
           }}
         />
-        
-        {/* Main image with overlay */}
+
         <div className="relative z-10 h-64 w-full">
           <img 
             src={image} 

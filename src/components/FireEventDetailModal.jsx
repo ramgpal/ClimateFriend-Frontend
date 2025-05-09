@@ -1,4 +1,3 @@
-// components/FireEventDetailModal.js
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 

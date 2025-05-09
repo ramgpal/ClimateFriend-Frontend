@@ -1,15 +1,19 @@
 const Footer = () => {
-  // Function to open Research Papers in new tab
+  // Function to open Research Papers 
   const openResearchPapers = () => {
-    // Replace with your actual PDF file path or URL
     const pdfUrl = '/research-papers.pdf';
     window.open(pdfUrl, '_blank', 'noopener,noreferrer');
   };
 
-  // Function to open Review Paper in new tab
+  // Function to open Review Paper 
   const openReviewPaper = () => {
-    // Replace with your actual PDF file path or URL
     const pdfUrl = '/review-paper.pdf';
+    window.open(pdfUrl, '_blank', 'noopener,noreferrer');
+  };
+
+  // Function to open Project Report 
+  const openProjectReport = () => {
+    const pdfUrl = '/Project-Report.pdf';
     window.open(pdfUrl, '_blank', 'noopener,noreferrer');
   };
 
@@ -56,6 +60,14 @@ const Footer = () => {
                   Review Paper
                 </button>
               </li>
+              <li>
+                <button 
+                  onClick={openProjectReport}
+                  className="hover:text-white transition cursor-pointer text-left"
+                >
+                  Project Report
+                </button>
+              </li>
             </ul>
           </div>
           
@@ -64,7 +76,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <address className="not-italic text-gray-400 space-y-2">
               <p>info@climatefriend.com</p>
-              <p>+91 797 995 7656</p>
+              <p>+91 128 478 9922</p>
             </address>
           </div>
         </div>

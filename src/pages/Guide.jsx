@@ -194,7 +194,6 @@ const Guide = () => {
   );
 };
 
-// Reusable Components
 const GuideCard = ({ icon, title, content, image }) => (
   <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
     <div className="relative h-48 overflow-hidden">
