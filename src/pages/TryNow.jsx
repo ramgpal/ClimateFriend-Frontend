@@ -320,11 +320,14 @@ import { FiUpload, FiX, FiCheck, FiSend, FiImage, FiVideo } from 'react-icons/fi
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const TryNow = () => {
+  const navigate = useNavigate(); 
   const [file, setFile] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
   const fileInputRef = useRef(null);
 
   const handleFileChange = (e) => {
@@ -389,7 +392,8 @@ const TryNow = () => {
       );
 
       console.log('Upload successful:', response.data);
-      alert('Media submitted successfully!');
+      navigate('/detection-result', { state: { result: response.data } });
+      // alert('Media submitted successfully!');
       
       // Reset form
       setFile(null);

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { FaPhone, FaEnvelope } from 'react-icons/fa';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,32 +12,44 @@ const Contact = () => {
     message: ''
   });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await fetch('/api/sendmail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    // Send email using EmailJS
+    const templateParams = {
+      fullName: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    };
+
+    // Send the email via EmailJS
+    const response = await emailjs.send(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,  // Your EmailJS Service ID
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID1,  // Your EmailJS Template ID
+      templateParams,
+      process.env.REACT_APP_EMAILJS_USER_ID      // Your EmailJS User ID
+    );
+
+    if (response.status === 200) {
+      alert('Message sent successfully!');
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
       });
-      
-      if (response.ok) {
-        alert('Message sent successfully!');
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: ''
-        });
-      } else {
-        alert('Failed to send message. Please try again.');
-      }
-    } catch (error) {
-      alert('An error occurred. Please try again later.');
+    } else {
+      alert('Failed to send message. Please try again.');
     }
-  };
+  } catch (error) {
+    console.error('Error sending email:', error);
+    alert('An error occurred. Please try again later.');
+  }
+};
+
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
