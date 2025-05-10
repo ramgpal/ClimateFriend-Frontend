@@ -97,8 +97,8 @@ const handleSubmit = async (e) => {
                 <div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Email</h3>
                   <p className="text-gray-600">
-                    info@climatefriend.com<br />
-                    support@climatefriend.com
+                    info.climatefriend@gmail.com<br />
+                    info.climatefriend@gmail.com
                   </p>
                 </div>
               </div>

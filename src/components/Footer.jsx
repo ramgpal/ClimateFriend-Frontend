@@ -75,8 +75,8 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <address className="not-italic text-gray-400 space-y-2">
-              <p>info@climatefriend.com</p>
-              <p>+91 128 478 9922</p>
+              <p>info.climatefriend@gmail.com</p>
+              {/* <p></p> */}
             </address>
           </div>
         </div>
