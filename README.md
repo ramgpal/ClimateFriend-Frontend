@@ -4,7 +4,7 @@ This repository consists of User Interface to check working of my ML models aime
 
 ## Screenshots
 
-![UI]((https://drive.google.com/file/d/1lrHt7S8TFyyK4RXDbbHVyKDd4UICwFti/view?usp=sharing))
+![UI](https://drive.google.com/uc?export=view&id=1lrHt7S8TFyyK4RXDbbHVyKDd4UICwFti)
 **Result Snapshot of UI after detection**
 
 ![Output 2](https://drive.google.com/uc?export=view&id=1kaAgFeQzYKrsFZtzKUF1uwkYJaDDkyEu)
