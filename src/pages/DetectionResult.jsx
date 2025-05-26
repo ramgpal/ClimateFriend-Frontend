@@ -98,7 +98,24 @@ const DetectionResult = () => {
 
         <div className="bg-white shadow-lg rounded-lg p-6 text-gray-700 space-y-4">
           <p><strong>Status:</strong> {message}</p>
-          <p><strong>Fire Detected:</strong> <span className={fireDetected ? "text-red-600 font-semibold" : "text-green-600 font-semibold"}>{fireDetected ? "Yes" : "No"}</span></p>
+          <p><strong>Detection Result:</strong> {
+            detections?.length > 0 ? (() => {
+              const labels = [];
+              if (detections.some(d => d.label === 'fire')) {
+                labels.push(<span key="fire" className="text-red-600 font-semibold">Fire</span>);
+              }
+              if (detections.some(d => d.label === 'smoke')) {
+                labels.push(<span key="smoke" className="text-yellow-600 font-semibold">Smoke</span>);
+              }
+
+              return labels.reduce((prev, curr, index) => index === 0 ? [curr] : [...prev, ', ', curr], []);
+            })() : (
+              <span className="text-green-600 font-semibold">Normal</span>
+            )
+          }</p>
+
+
+
           <p><strong>Location: </strong> 
             {coords
               ? `${coords.latitude.toFixed(4)}, ${coords.longitude.toFixed(4)}`
